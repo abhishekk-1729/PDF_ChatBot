@@ -17,7 +17,7 @@ export default function Uploader({files,setFiles,removeFile,setPdfText}) {
         formData.append('file',file)
         console.log(file);
 
-        axios.post('http://127.0.0.1:5001/extract_text', formData)
+        axios.post('https://pdf-q-a-backend-new-2.onrender.com/extract_text', formData)
         .then((res) => {
             file.isUploading = false;
             setFiles([...files, file]);
