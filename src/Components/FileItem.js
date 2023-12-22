@@ -17,7 +17,7 @@ const FileItem = ({ file, deleteFile, pdfText}) => {
   const handleOnClick = async () => {
     try {
         // Make a request to the server to process the input
-        const response = await axios.post('http://127.0.0.1:5000/give_ans', {
+        const response = await axios.post('http://127.0.0.1:5001/give_ans', {
             pdfText: pdfText,
             input_text: input,
         });
